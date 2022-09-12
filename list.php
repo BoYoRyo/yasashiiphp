@@ -18,7 +18,7 @@ try {
       match ($row["difficulty"]) {
         "1" => "簡単",
         "2" => "普通",
-        "3" => "難しい"
+        "3" => "難しいよ"
       } . "</td>" . PHP_EOL;
     echo "</tr>" . PHP_EOL;
   }
