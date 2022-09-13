@@ -1,6 +1,8 @@
+/**
+ * 詳細画面
+ */
 <?php
-$user = "mysql";
-$pass = "mysql";
+require_once __DIR__ . "/../../db_config.php";
 try {
   if (empty($_GET["id"])) {
     echo "IDを正しく入力してください";
@@ -34,6 +36,7 @@ try {
   } . "<br>" . PHP_EOL;
   echo "作り方：<br>" . nl2br(htmlspecialchars($result["howto"], ENT_QUOTES)) . "<br>" . PHP_EOL;
   $dbh = null;
+  echo "<a href=index.php>トップ</a>";
 } catch (PDOException $e) {
   echo "エラー発生：" . htmlspecialchars($e->getMessage(), ENT_QUOTES) . "<br>";
   exit;

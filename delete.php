@@ -1,6 +1,5 @@
 <?php
-$user = "mysql";
-$pass = "mysql";
+require_once __DIR__ . "/../../db_config.php";
 if (empty($_GET["id"])) {
   echo "正しいIDを入力してください。";
   exit;
@@ -15,6 +14,7 @@ try {
   $stmt->execute();
   $dbh = null;
   echo "ID：" . htmlspecialchars($id, ENT_QUOTES) . "の削除が完了しました。";
+  echo "<a href=index.php>トップ</a>";
 } catch (PDOException $e) {
   echo "エラー発生：" . htmlspecialchars($e->getMessage(), ENT_QUOTES) . "<br>";
   exit;

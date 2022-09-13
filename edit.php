@@ -1,6 +1,8 @@
+/**
+ * 変更を入力してupdateを呼ぶ
+ */
 <?php
-$user = "mysql";
-$pass = "mysql";
+require_once __DIR__ . "/../../db_config.php";
 if (empty($_GET["id"])) {
   echo "正しいIDを入力してください。";
   exit;
@@ -50,5 +52,6 @@ try {
       <textarea name="howto" cols="30" rows="10" ><?= htmlspecialchars($result["howto"], ENT_QUOTES); ?></textarea><br>
     <input type="submit" value="送信">
   </form>
+  <a href=index.php>トップ</a>
 </body>
 </html>
