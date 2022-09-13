@@ -28,7 +28,7 @@
 
     echo "difficulty:";
     // if ($_POST["difficulty"] == "1") {
-      //   echo "簡単";
+    //   echo "簡単";
     // } elseif ($_POST["difficulty"] == "2") {
     //   echo "普通";
     // } else {
